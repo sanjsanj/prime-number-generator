@@ -1,6 +1,8 @@
+let primesArray;
+
 function primeGenerator(num) {
-  const primesArray = [];
   let currentNum = 2;
+  primesArray = [];
 
   while (primesArray.length < num) {
     if (_isPrime(currentNum)) {
@@ -14,11 +16,16 @@ function primeGenerator(num) {
 }
 
 function _isPrime(num) {
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) return false;
+  let isPrime = true;
+
+  for (let prime of primesArray) {
+    if (num % prime === 0) {
+      isPrime = false;
+      break;
+    }
   }
 
-  return true;
+  return isPrime;
 }
 
 module.exports = { primeGenerator };
