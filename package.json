@@ -1,0 +1,22 @@
+{
+  "name": "prime-number-generator",
+  "version": "1.0.0",
+  "description": "A prime number multiplication table generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanjsanj/prime-number-generator.git"
+  },
+  "keywords": [
+    "prime"
+  ],
+  "author": "sanjsanj@hotmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanjsanj/prime-number-generator/issues"
+  },
+  "homepage": "https://github.com/sanjsanj/prime-number-generator#readme"
+}
