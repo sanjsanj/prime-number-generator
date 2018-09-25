@@ -1,7 +1,7 @@
 function PrimeFactory() {
   const primesArray = [];
 
-  function generate(num) {
+  function generatePrimes(num) {
     let currentNum = 2;
 
     while (primesArray.length < num) {
@@ -30,7 +30,7 @@ function PrimeFactory() {
     return isPrime;
   }
 
-  return Object.freeze({ generate });
+  return Object.freeze({ generatePrimes });
 }
 
 module.exports = { PrimeFactory };
