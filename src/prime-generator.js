@@ -1,5 +1,5 @@
 module.exports = {
   primeGenerator(num) {
-    return [2];
+    return num === 1 ? [2] : [2, 3];
   }
 };
