@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/sanjsanj/prime-number-generator/issues"
   },
-  "homepage": "https://github.com/sanjsanj/prime-number-generator#readme"
+  "homepage": "https://github.com/sanjsanj/prime-number-generator#readme",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.4"
+  }
 }
