@@ -1,33 +1,37 @@
-let primesArray;
+function PrimeFactory() {
+  let primesArray;
 
-function primeGenerator(num) {
-  let currentNum = 2;
-  primesArray = [];
+  function generate(num) {
+    let currentNum = 2;
+    primesArray = [];
 
-  while (primesArray.length < num) {
-    if (_isPrime(currentNum)) {
-      primesArray.push(currentNum);
+    while (primesArray.length < num) {
+      if (_isPrime(currentNum)) {
+        primesArray.push(currentNum);
+      }
+
+      currentNum++;
     }
 
-    currentNum++;
+    return primesArray;
   }
 
-  return primesArray;
-}
+  function _isPrime(num) {
+    let isPrime = true;
 
-function _isPrime(num) {
-  let isPrime = true;
+    for (let prime of primesArray) {
+      if (prime > Math.sqrt(num)) break;
 
-  for (let prime of primesArray) {
-    if (prime > Math.sqrt(num)) break;
-
-    if (num % prime === 0) {
-      isPrime = false;
-      break;
+      if (num % prime === 0) {
+        isPrime = false;
+        break;
+      }
     }
+
+    return isPrime;
   }
 
-  return isPrime;
+  return Object.freeze({ generate });
 }
 
-module.exports = { primeGenerator };
+module.exports = { PrimeFactory };
