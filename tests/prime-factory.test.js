@@ -1,4 +1,4 @@
-const { PrimeFactory } = require("../src/prime-generator");
+const { PrimeFactory } = require("../src/prime-factory");
 const { tenPrimes, thousandPrimes } = require("./helpers");
 
 describe("PrimeFactory().generate", () => {
