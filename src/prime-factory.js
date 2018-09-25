@@ -1,21 +1,5 @@
 function PrimeFactory() {
-  const primesArray = [];
-
-  function generatePrimes(num) {
-    let currentNum = 2;
-
-    while (primesArray.length < num) {
-      if (_isPrime(currentNum)) {
-        primesArray.push(currentNum);
-      }
-
-      currentNum++;
-    }
-
-    return primesArray;
-  }
-
-  function _isPrime(num) {
+  function _isPrime(num, primesArray) {
     let isPrime = true;
 
     for (let prime of primesArray) {
@@ -28,6 +12,21 @@ function PrimeFactory() {
     }
 
     return isPrime;
+  }
+
+  function generatePrimes(num) {
+    const primesArray = [];
+    let currentNum = 2;
+
+    while (primesArray.length < num) {
+      if (_isPrime(currentNum, primesArray)) {
+        primesArray.push(currentNum);
+      }
+
+      currentNum++;
+    }
+
+    return primesArray;
   }
 
   function generateTable(primesArray) {
