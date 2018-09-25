@@ -19,6 +19,8 @@ function _isPrime(num) {
   let isPrime = true;
 
   for (let prime of primesArray) {
+    if (prime > Math.sqrt(num)) break;
+
     if (num % prime === 0) {
       isPrime = false;
       break;
