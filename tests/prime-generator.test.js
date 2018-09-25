@@ -17,4 +17,8 @@ describe("PrimeFactory().generate", () => {
   it("should return array of 1,000 prime numbers", () => {
     expect(PrimeFactory().generate(1000)).toEqual(thousandPrimes);
   });
+
+  it("should return array of 20,000 prime numbers", () => {
+    expect(PrimeFactory().generate(20000).length).toEqual(20000);
+  });
 });
