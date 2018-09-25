@@ -31,11 +31,19 @@ function PrimeFactory() {
   }
 
   function generateTable(primesArray) {
-    return {
-      "2": {
-        "2": 4
-      }
-    };
+    return primesArray.reduce(
+      (acc1, cur1) => ({
+        ...acc1,
+        [cur1]: primesArray.reduce(
+          (acc2, cur2) => ({
+            ...acc2,
+            [cur2]: cur2 * cur1
+          }),
+          {}
+        )
+      }),
+      {}
+    );
   }
 
   return Object.freeze({ generatePrimes, generateTable });

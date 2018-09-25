@@ -1,5 +1,10 @@
 const { PrimeFactory } = require("../src/prime-factory");
-const { tenPrimes, thousandPrimes } = require("./helpers");
+const {
+  tenPrimes,
+  thousandPrimes,
+  onePrimeDataObject,
+  tenPrimesDataObject
+} = require("./helpers");
 
 describe("PrimeFactory", () => {
   describe("generatePrimes", () => {
@@ -38,13 +43,11 @@ describe("PrimeFactory", () => {
     });
 
     it("should return the right object to display 1 prime number", () => {
-      const data = {
-        2: {
-          2: 4
-        }
-      };
+      expect(generateTable([2])).toEqual(onePrimeDataObject);
+    });
 
-      expect(generateTable([2])).toEqual(data);
+    it("should return the right object to display 10 prime numbers", () => {
+      expect(generateTable(tenPrimes)).toEqual(tenPrimesDataObject);
     });
   });
 });
