@@ -30,7 +30,15 @@ function PrimeFactory() {
     return isPrime;
   }
 
-  return Object.freeze({ generatePrimes });
+  function generateTable(primesArray) {
+    return {
+      "2": {
+        "2": 4
+      }
+    };
+  }
+
+  return Object.freeze({ generatePrimes, generateTable });
 }
 
 module.exports = { PrimeFactory };

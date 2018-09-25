@@ -31,7 +31,20 @@ describe("PrimeFactory", () => {
   });
 
   describe("generateTable", () => {
-    it("", () => {
+    let generateTable;
+
+    beforeEach(() => {
+      generateTable = PrimeFactory().generateTable;
+    });
+
+    it("should return the right object to display 1 prime number", () => {
+      const data = {
+        2: {
+          2: 4
+        }
+      };
+
+      expect(generateTable([2])).toEqual(data);
     });
   });
 });
