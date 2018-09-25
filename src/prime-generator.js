@@ -1,9 +1,8 @@
 function PrimeFactory() {
-  let primesArray;
+  const primesArray = [];
 
   function generate(num) {
     let currentNum = 2;
-    primesArray = [];
 
     while (primesArray.length < num) {
       if (_isPrime(currentNum)) {
