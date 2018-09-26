@@ -8,11 +8,7 @@ const {
 
 describe("PrimeFactory", () => {
   describe("generatePrimes", () => {
-    let generatePrimes;
-
-    beforeEach(() => {
-      generatePrimes = PrimeFactory().generatePrimes;
-    });
+    const generatePrimes = PrimeFactory().generatePrimes;
 
     it("should return array of 1 prime number", () => {
       expect(generatePrimes(1)).toEqual([2]);
@@ -36,11 +32,7 @@ describe("PrimeFactory", () => {
   });
 
   describe("generateTable", () => {
-    let generateTable;
-
-    beforeEach(() => {
-      generateTable = PrimeFactory().generateTable;
-    });
+    const generateTable = PrimeFactory().generateTable;
 
     it("should return the right object to display 1 prime number", () => {
       expect(generateTable([2])).toEqual(onePrimeDataObject);
